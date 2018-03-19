@@ -1,0 +1,33 @@
+<div>
+  <%= form_for label, remote: true do |f| %>
+  <div>
+    <h2>Shipping To<h2>
+    <%= render 'addresses/form', f: f, type: :to_address %>
+  </div>
+  <div>
+    <h2>Shipping From<h2>
+    <%= render 'addresses/form', f: f, type: :from_address %>
+  </div>
+
+    <div>
+      <%= f.text_field :height %>
+    </div>
+
+    <div>
+      <%= f.text_field :length %>
+    </div>
+
+    <div>
+      <%= f.text_field :width %>
+    </div>
+
+    <div>
+      <%= f.text_field :weight %>
+    </div>
+
+    <div>
+      <%= f.submit "Buy Postage" %>
+    </div>
+
+  <% end %>
+</div>

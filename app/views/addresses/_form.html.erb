@@ -1,0 +1,29 @@
+<%= f.fields_for type do |ff| %>
+  <div>
+    <%= ff.text_field :name %>
+  </div>
+
+  <div>
+    <%= ff.text_field :company %>
+  </div>
+
+  <div>
+    <%= ff.text_field :street1 %>
+  </div>
+
+  <div>
+    <%= ff.text_field :city %>
+  </div>
+
+  <div>
+    <%= ff.text_field :state %>
+  </div>
+
+  <div>
+    <%= ff.text_field :zip %>
+  </div>
+
+  <div>
+    <%= ff.text_field :phone %>
+  </div>
+<% end %>
