@@ -1,6 +1,6 @@
 class Label < ApplicationRecord
   has_many :addresses
-  accepts_nested_attributes_for :address
+  accepts_nested_attributes_for :addresses
 
   def from_address
     self.addresses.where(is_to_address: false).first || Address.new(is_to_address: false)

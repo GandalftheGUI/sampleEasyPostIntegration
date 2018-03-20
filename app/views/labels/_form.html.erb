@@ -1,29 +1,46 @@
 <div>
   <%= form_for label, remote: true do |f| %>
-  <div>
-    <h2>Shipping To<h2>
-    <%= render 'addresses/form', f: f, type: :to_address %>
-  </div>
-  <div>
-    <h2>Shipping From<h2>
-    <%= render 'addresses/form', f: f, type: :from_address %>
-  </div>
+    <div class="package-info-container">
+      <h2>Package Information<h2>
 
-    <div>
-      <%= f.text_field :height %>
+      <div class="form-section">
+        <div class="form-section-label">Height (in.)</div>
+        <%= f.text_field :height %>
+      </div>
+
+      <div class="form-section">
+        <div class="form-section-label">Length (in.)</div>
+        <%= f.text_field :length %>
+      </div>
+
+      <div class="form-section">
+        <div class="form-section-label">With (in.)</div>
+        <%= f.text_field :width %>
+      </div>
+
+      <div class="form-section">
+        <div class="form-section-label">Weight (oz)</div>
+        <%= f.text_field :weight %>
+      </div>
     </div>
 
-    <div>
-      <%= f.text_field :length %>
+    <div class="addresses-container">
+      <div>
+        <h2>Shipping From<h2>
+        <%= render 'addresses/form', f: f, type: :from_address %>
+      </div>
+
+      <div>
+        ->
+      </div>
+
+      <div>
+        <h2>Shipping To<h2>
+        <%= render 'addresses/form', f: f, type: :to_address %>
+      </div>
     </div>
 
-    <div>
-      <%= f.text_field :width %>
-    </div>
-
-    <div>
-      <%= f.text_field :weight %>
-    </div>
+   
 
     <div>
       <%= f.submit "Buy Postage" %>
