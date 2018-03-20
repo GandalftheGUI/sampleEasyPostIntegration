@@ -18,13 +18,15 @@ You will need to create an account at easypost.com in order to get API keys to t
 ------------------------------------------
 
 # About my solution #
-A section for commentary about parts of my solution.
+The solution is functioning as described above. When given correct input the website displays a test label for the given input. The solution as such does not handle incorrect data currently and will 500 error when given incorrect address. This is explained in more detail in the 'Things to add going forward' section.
 
 ## Assumptions ##
 * Anyone with access to the page is authorized to print labels, as such there will be no user validation system.
+* As this is a prototype, error handling and styling will be saved for later iterations.
 
 ## Things to add going forward ##
 * Address verification, currently an incorrect address will cause the Easy Post API to return an error. I would find and implement a tool to validate the addresses when they are submitted and return an error before attempting to create a label through the Easy Post API.
 * Form validation, not filling in all required fields results in a 500 error. I would add form validation and messages to alert the user that more information is required.
 * More advanced shipping options, there are number of option like customs info and insurance, shipping rate selection that are not currently implemented.
 * Email the label link, I would like users to have a copy of the link sent to their in-box in case they lost the link or were not able to immediately able to print the label.
+* Styling and appearance, some light styling has been applied but more work needs to be done.
