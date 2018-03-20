@@ -15,5 +15,7 @@ class LabelsController < ApplicationController
     to_address.is_to_address = true
     @label.addresses = [from_address, to_address]
     @label.save!
+
+    redirect_to EasyPostHelper.create_shipment(@label)
   end
 end

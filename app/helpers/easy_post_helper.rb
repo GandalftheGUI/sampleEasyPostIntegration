@@ -1,6 +1,4 @@
-require 'easypost'
-
-class EasyPostHelper
+module EasyPostHelper
   def self.create_shipment(label)
     to_address = proccess_address(label.to_address)
     from_address = proccess_address(label.from_address)
@@ -8,13 +6,16 @@ class EasyPostHelper
     shipment = EasyPost::Shipment.create(
       :to_address => to_address,
       :from_address => from_address,
-      :parcel => parcel,
-      :customs_info => customs_info
+      :parcel => proccess_parcel(label)
     )
 
     shipment.buy(
       :rate => shipment.lowest_rate
     )
+
+    shipment.insure(amount: 100)
+
+    return shipment.postage_label.label_url
   end
 
   private
@@ -29,11 +30,12 @@ class EasyPostHelper
       :state => address.state,
       :zip => address.zip,
       :country => address.country,
-      :phone => address.phone,
+      :phone => address.phone
+    )
   end
 
   def self.proccess_parcel(label)
-    parcel = EasyPost::Parcel.create(
+    EasyPost::Parcel.create(
       :width => label.width,
       :length => label.length,
       :height => label.height,

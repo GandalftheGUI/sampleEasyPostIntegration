@@ -14,5 +14,6 @@ module SampleEasyPostIntegration
     # Settings in config/environments/* take precedence over those specified here.
     # Application configuration should go into files in config/initializers
     # -- all .rb files in that directory are automatically loaded.
+    EasyPost.api_key = Rails.application.secrets.EASY_POST
   end
 end
