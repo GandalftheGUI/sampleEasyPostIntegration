@@ -17,3 +17,18 @@
 .page-section {
   padding: 10px;
 }
+
+.shipping-label-holder {
+  height: 100vh;
+  width: 100%;
+  border: none;
+}
+
+.label-header {
+  display: flex;
+
+  div:last-child {
+    margin-left: auto;
+  }
+
+}

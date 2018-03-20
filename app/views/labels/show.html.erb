@@ -1,0 +1,16 @@
+<div class="page-section">
+  <div class="label-header">
+    <div>
+      You can use the address above to access this label at any time, a copy has been sent to the email you provided as well.
+    </div>
+
+    <div>
+      <%= link_to "Back", :root %>
+    </div>
+  </div>
+
+</div>
+
+<div class="page-section">
+  <iframe class="shipping-label-holder" src="<%= @label.label_url %>"></iframe>
+</div>

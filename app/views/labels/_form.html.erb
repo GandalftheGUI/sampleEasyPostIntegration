@@ -1,6 +1,13 @@
 <div>
   <%= form_for label, remote: true do |f| %>
     <div class="package-info-container">
+      <div class="form-section">
+        <div class="form-section-label">Your Email</div>
+        <%= f.text_field :email %>
+      </div>
+    </div>
+
+    <div class="package-info-container">
       <h2>Package Information<h2>
 
       <div class="form-section">
@@ -39,8 +46,6 @@
         <%= render 'addresses/form', f: f, type: :to_address %>
       </div>
     </div>
-
-   
 
     <div>
       <%= f.submit "Buy Postage" %>

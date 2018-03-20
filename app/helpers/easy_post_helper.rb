@@ -15,7 +15,7 @@ module EasyPostHelper
 
     shipment.insure(amount: 100)
 
-    return shipment.postage_label.label_url
+    return {label_url: shipment.postage_label.label_url, rate: shipment.lowest_rate[:rate]}
   end
 
   private
