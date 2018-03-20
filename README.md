@@ -27,4 +27,4 @@ A section for commentary about parts of my solution.
 * Address verification, currently an incorrect address will cause the Easy Post API to return an error. I would find and implement a tool to validate the addresses when they are submitted and return an error before attempting to create a label through the Easy Post API.
 * Form validation, not filling in all required fields results in a 500 error. I would add form validation and messages to alert the user that more information is required.
 * More advanced shipping options, there are number of option like customs info and insurance, shipping rate selection that are not currently implemented.
-* Email the label link, I would like users to have a copy of the link sent to their inbox incase they lost the link or were not able to immediately able to print the label.
+* Email the label link, I would like users to have a copy of the link sent to their in-box in case they lost the link or were not able to immediately able to print the label.
