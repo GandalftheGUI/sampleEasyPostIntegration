@@ -22,7 +22,8 @@ The solution is functioning as described above. When given correct input the web
 
 ## Assumptions ##
 * Anyone with access to the page is authorized to print labels, as such there will be no user validation system.
-* As this is a prototype, error handling and styling will be saved for later iterations.
+* As this is a prototype, error handling and styling will be saved for later iterations, the current focus will be on core functionality.
+* Shipping label information should be persisted and may need to be accessed again later.
 
 ## Things to add going forward ##
 * Address verification, currently an incorrect address will cause the Easy Post API to return an error. I would find and implement a tool to validate the addresses when they are submitted and return an error before attempting to create a label through the Easy Post API.
