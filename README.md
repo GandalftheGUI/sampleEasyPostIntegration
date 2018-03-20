@@ -4,7 +4,6 @@ The following project is designed to take about 4 hours. This time includes rese
 The project specification is intentionally ambiguous and leaves room for interpretation. Implementing this project requires that you make design choices and use  case assumptions. Feel free to explain your assumptions when submitting your response.
 
 ## Requirements ##
-
 Use the EasyPost API ( https://www.easypost.com/ ) to implement a web page where a user can print a USPS Shipping Label in order to mail packages.
 
 **Inputs :**
@@ -18,7 +17,13 @@ You will need to create an account at easypost.com in order to get API keys to t
 
 ------------------------------------------
 
-# Things to add in later iterations #
+# About my solution #
+A section for commentary about parts of my solution.
+
+## Assumptions ##
+* Anyone with access to the page is authorized to print labels, as such there will be no user validation system.
+
+## Things to add going forward ##
 * Address verification, currently an incorrect address will cause the Easy Post API to return an error. I would find and implement a tool to validate the addresses when they are submitted and return an error before attempting to create a label through the Easy Post API.
 * Form validation, not filling in all required fields results in a 500 error. I would add form validation and messages to alert the user that more information is required.
 * More advanced shipping options, there are number of option like customs info and insurance, shipping rate selection that are not currently implemented.
